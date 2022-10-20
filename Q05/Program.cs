@@ -17,7 +17,11 @@ namespace Q05
 			//Console.WriteLine(firstDayOfYear);
 
 			DayOfWeek dayOfFirstDay = firstDayOfYear.DayOfWeek;
-			DateTime firstSunday = firstDayOfYear.AddDays(7 - (int)dayOfFirstDay);
+			DateTime firstSunday = firstDayOfYear;
+			if ( (int)dayOfFirstDay > 0)
+			{
+				firstSunday = firstDayOfYear.AddDays(7 - (int)dayOfFirstDay);
+			}
 			//Console.WriteLine($"第一個禮拜天{firstSunday}");
 
 			DateTime lastDayOfYear = new DateTime(Convert.ToInt32(input), 12, 31);

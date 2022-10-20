@@ -15,19 +15,22 @@ namespace Q6
 			int day = now.Day;
 
 			Console.Write($"今天是{month}月{day}日 ");
+			string msg = string.Empty;
 
 			if (day <= 10)
 			{
-				Console.WriteLine("上旬");
+				msg = "上旬";
 			}
 			else if (day >= 21)
 			{
-				Console.WriteLine("下旬");
+				msg = "下旬";
 			}
 			else
 			{
-				Console.WriteLine("中旬");
+				msg = "中旬";
 			}
+
+			Console.WriteLine(msg);
 		}
 	}
 }
